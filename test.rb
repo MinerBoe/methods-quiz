@@ -28,4 +28,17 @@ describe 'methods_quiz' do
 
 	end
 
+	describe 'not_string' do
+		it 'hello return nothello' do
+			not_string('hello').must_equal('nothello')
+		end
+		it 'notapples return string unchanged' do
+			not_string('notapples').must_equal('notapples')
+		end
+		it 'capital Notoranges return string unchanged' do
+			not_string('Notoranges').must_equal('Notoranges')
+		end
+	end
+
+
 end
