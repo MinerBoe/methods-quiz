@@ -18,6 +18,15 @@ def not_string(str)
 end
 
 # TODO - write icy_hot?
+def icy_hot?(int_a, int_b)
+	if int_a < 0 && int_b > 100
+		return true
+	end
+	if  int_a > 100 && int_b < 0
+		return true
+	end
+	return false
+end
 
 # TODO - write closer_to
 
