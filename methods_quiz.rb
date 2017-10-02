@@ -9,6 +9,13 @@ end
 
 
 # TODO - write not_string
+def not_string(str)
+	d_str = str.downcase()
+	if d_str[0..2] == 'not'
+		return str
+	end
+	return 'not'+str
+end
 
 # TODO - write icy_hot?
 
