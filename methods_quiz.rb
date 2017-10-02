@@ -29,5 +29,16 @@ def icy_hot?(int_a, int_b)
 end
 
 # TODO - write closer_to
+def closer_to(guess, int_a, int_b)
+	distance_a = (guess - int_a).abs
+	distance_b = (guess - int_b).abs
+	if distance_b == distance_a
+		return 0
+	end
+	if distance_a > distance_b
+		return int_b
+	end
+	return int_a
+end
 
 # TODO - write two_as_one?
