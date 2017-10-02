@@ -78,4 +78,19 @@ describe 'methods_quiz' do
 			closer_to(20, 23, 18).must_equal(18) 
 		end
 	end
+
+	describe 'two_as_one?' do
+		it 'first two equal third return true' do
+			two_as_one?(1, 2, 3).must_equal(true)
+		end
+		it 'last two equal first return true' do
+			two_as_one?(3, 2, 1).must_equal(true)
+		end
+		it 'no pair equals a value return false' do
+			two_as_one?(4, 7, 100).must_equal(false)
+		end
+		it 'end values equal middle' do
+			two_as_one?(1, 3, 2).must_equal(true)
+		end
+	end
 end
