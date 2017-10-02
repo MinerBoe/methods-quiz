@@ -60,4 +60,22 @@ describe 'methods_quiz' do
 			icy_hot?(-20, 119).must_equal(true)
 		end
 	end
+
+	describe 'closer_to' do
+		it 'both values are the same distance return 0' do
+			closer_to(10, 20, 20).must_equal(0)
+		end
+		it 'a is closer return a' do
+			closer_to(15, 17, 19).must_equal(17)
+		end
+		it 'b is closer return b' do
+			closer_to(18, 10, 19).must_equal(19)
+		end
+		it 'a is closer but under guess return a' do
+			closer_to(20, 18, 23).must_equal(18) 
+		end
+		it 'b is closer but under guess return b' do
+			closer_to(20, 23, 18).must_equal(18) 
+		end
+	end
 end
