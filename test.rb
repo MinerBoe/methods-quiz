@@ -14,8 +14,16 @@ describe 'methods_quiz' do
 			has_teen?(12, 20, 100).must_equal(false)
 		end
 
-		it 'one teen return true' do
+		it 'first teen return true' do
 			has_teen?(15, 20, 12).must_equal(true)
+		end
+
+		it 'second teen return true' do
+			has_teen?(10, 15, 12).must_equal(true)
+		end
+
+		it 'third teen return true' do
+			has_teen?(10, 20, 15).must_equal(true)
 		end
 
 		it 'one teen is first endpoint return true' do
