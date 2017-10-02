@@ -40,5 +40,24 @@ describe 'methods_quiz' do
 		end
 	end
 
-
+	describe 'icy_hot?' do
+		it 'both are icy return false' do
+			icy_hot?(-10, -16).must_equal(false)
+		end
+		it 'both are hot return false' do
+			icy_hot?(116, 110).must_equal(false)
+		end
+		it 'both are not icy or hot return false' do
+			icy_hot?(50, 75).must_equal(false)
+		end
+		it 'one is icy but the other is not hot return false' do
+			icy_hot?(-10, 50).must_equal(false)
+		end
+		it 'one is hot but the other is not icy return false' do
+			icy_hot?(40, 119).must_equal(false)
+		end
+		it 'one is icy and one is hot return true' do
+			icy_hot?(-20, 119).must_equal(true)
+		end
+	end
 end
